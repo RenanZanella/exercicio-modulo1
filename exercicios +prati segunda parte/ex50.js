@@ -135,11 +135,16 @@ function executarEscolha(escolha) {
         let idReserva = prompt("Digite a ID da reserva que deseja cancelar:");
         cancelarReserva(idReserva);
     } else if (escolha === 3) {
-        
-        console.log("Implemente a lógica para fazer a reserva.");
+        let idReserva = prompt("Digite o id para a reserva: ");
+        let idHotel = prompt("Digite a id do hotel: ");
+        let nomeCliente = prompt("Digite seu nome: ");
+        fazerReserva(idReserva, idHotel, nomeCliente);
     } else if (escolha === 4) {
-        
-        console.log("Implemente a lógica para adicionar hotel.");
+        let id = prompt("Digite o id do hotel: ");
+        let nome = prompt("Digite o nome: ");
+        let cidade = prompt("Digite a cidade: ");
+        let quartosTotais = prompt("Digite a quantidade dos quartos:");
+        adicionarHotel(id, nome, cidade, quartosTotais)
     } else if (escolha === 5) {
         let cidade = prompt("Digite a cidade para buscar hotéis:");
         buscarHoteisPorCidade(cidade);
@@ -153,7 +158,7 @@ function executarEscolha(escolha) {
 let escolhaDoUsuario = 0;
 while (escolhaDoUsuario !== 6) {
     console.log('------------------')
-    escolhaDoUsuario = parseInt(prompt("Digite a ação desejada: \n1 - listarReservas\n2 - cancelarReserva\n3 - fazerReserva\n4 - adicionarHotel\n5 - buscarHoteisPorCidade\n6 - sair  \n-->"), 10);
+    escolhaDoUsuario = parseInt(prompt("Digite a ação desejada: \n1 - listar Reservas\n2 - cancelar Reserva\n3 - fazer Reserva\n4 - adicionar Hotel\n5 - buscar Hoteis Por Cidade\n6 - sair  \n-->"));
     console.log('------------------')
     executarEscolha(escolhaDoUsuario);
 }
