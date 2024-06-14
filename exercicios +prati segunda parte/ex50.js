@@ -158,7 +158,8 @@ function executarEscolha(escolha) {
 let escolhaDoUsuario = 0;
 while (escolhaDoUsuario !== 6) {
     console.log('------------------')
-    escolhaDoUsuario = parseInt(prompt("Digite a ação desejada: \n1 - listar Reservas\n2 - cancelar Reserva\n3 - fazer Reserva\n4 - adicionar Hotel\n5 - buscar Hoteis Por Cidade\n6 - sair  \n-->"));
+    console.log("Digite a ação desejada: \n1 - listar Reservas\n2 - cancelar Reserva\n3 - fazer Reserva\n4 - adicionar Hotel\n5 - buscar Hoteis Por Cidade\n6 - sair")
+    escolhaDoUsuario = parseInt(prompt("-->"));
     console.log('------------------')
     executarEscolha(escolhaDoUsuario);
 }
